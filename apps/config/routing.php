@@ -14,6 +14,11 @@ $di['router'] = function() use ($defaultModule, $modules, $di, $config) {
 	    'controller' => isset($modules[$defaultModule]['defaultController']) ? $modules[$defaultModule]['defaultController'] : 'index',
 	    'action' => isset($modules[$defaultModule]['defaultAction']) ? $modules[$defaultModule]['defaultAction'] : 'index'
 	]);
+
+	$router->add('/attendant/new', array( 
+		'controller' => 'attendant', 
+		'action' => 'new', 
+	 ));
 	
 	/**
 	 * Not Found Routing

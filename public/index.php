@@ -17,6 +17,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 require_once APP_PATH . '/bootstrap.php';
 
-$app = new Bootstrap('oauth');
+$app = new Bootstrap('ticket');
 
 $app->init();

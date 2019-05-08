@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Oauth;
+namespace App\Ticket;
 
 use Phalcon\DiInterface;
 use Phalcon\Loader;
@@ -15,9 +15,9 @@ class Module implements ModuleDefinitionInterface
         $loader = new Loader();
 
         $loader->registerNamespaces([
-            'App\Oauth\Controllers\Web' => __DIR__ . '/controllers/web',
-            'App\Oauth\Controllers\Api' => __DIR__ . '/controllers/api',
-            'App\Oauth\Models' => __DIR__ . '/models'
+            'App\Ticket\Controllers\Web' => __DIR__ . '/controllers/web',
+            'App\Ticket\Controllers\Api' => __DIR__ . '/controllers/api',
+            'App\Ticket\Models' => __DIR__ . '/models'
         ]);
 
         $loader->register();

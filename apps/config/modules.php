@@ -2,12 +2,12 @@
 
 return array(
  
-    'oauth' => [
-        'namespace' => 'App\Oauth',
-        'webControllerNamespace' => 'App\Oauth\Controllers\Web',
-        'apiControllerNamespace' => 'App\Oauth\Controllers\Api',
-        'className' => 'App\Oauth\Module',
-        'path' => APP_PATH . '/modules/oauth/module.php',
+    'ticket' => [
+        'namespace' => 'App\Ticket',
+        'webControllerNamespace' => 'App\Ticket\Controllers\Web',
+        'apiControllerNamespace' => 'App\Ticket\Controllers\Api',
+        'className' => 'App\Ticket\Module',
+        'path' => APP_PATH . '/modules/Ticket/module.php',
         'defaultRouting' => true,
         'defaultController' => 'dashboard',
         'defaultAction' => 'index'
