@@ -5,7 +5,7 @@ namespace App\Ticket\Controllers\Web;
 use Phalcon\Mvc\Controller;
 use CleanArch\TicketOnline\Domain\Repository\AttendantRepositoryInterface;
 
-class AttendantController extends Controller
+class DashboardController extends Controller
 {
     public $attendantRepository;
     public function __construct(AttendantRepositoryInterface $attendantRepository) {

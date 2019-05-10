@@ -6,8 +6,8 @@ class Ticket extends AbstractEntity {
     protected $schedule;
     protected $attendant;
     protected $description;
-    protected $startTime;
-    protected $endTime;
+    protected $ticketNumber;
+    protected $total;
 
     public function setSchedule(Schedule $schedule) {
         $this->schedule = $schedule;
@@ -27,8 +27,12 @@ class Ticket extends AbstractEntity {
         return $this->attendant;
     }
 
-    public function setDescription($description) {
-        $this->description = $description;
+    public function getTicketNumber() {
+        return $this->ticketNumber;
+    }
+
+    public function setticketNumber($ticketNumber) {
+        $this->ticketNumber = $ticketNumber;
         return $this;
     }
 
@@ -36,30 +40,17 @@ class Ticket extends AbstractEntity {
         return $this->description;
     }
 
-    public function setDay($day) {
-        $this->day = $day;
+    public function setDescription($description) {
+        $this->description = $description;
         return $this;
     }
 
-    public function getDay() {
-        return $this->day;
+    public function getTotal() {
+        return $this->total;
     }
 
-    public function setStartTime($startTime) {
-        $this->startTime = $startTime;
+    public function setTotal($total) {
+        $this->total = $total;
         return $this;
-    }
-
-    public function getStartTime() {
-        return $this->startTime;
-    }
-
-    public function setEndTime($endTime) {
-        $this->endTime = $endTime;
-        return $this;
-    }
-
-    public function getEndTime() {
-        return $this->endTime;
     }
 }

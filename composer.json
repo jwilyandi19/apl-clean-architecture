@@ -1,7 +1,14 @@
 {
+    "require": {
+        "doctrine/orm": "^2.6",
+        "doctrine/doctrine-orm-module": "^2.1"
+    },
     "autoload": {
         "psr-4": {
-            "CleanArch\\TicketOnline\\": ["core/"]
+            "CleanArch\\TicketOnline\\": ["core/"],
+            "CleanArch\\TicketOnline\\Domain\\Repository\\": "core/Domain/Repository/",
+            "CleanArch\\TicketOnline\\Domain\\Entity\\": "core/Domain/Entity/",
+            "CleanArch\\TicketOnline\\Domain\\Factory\\": "core/Domain/Factory/"
         }
     }
 }
