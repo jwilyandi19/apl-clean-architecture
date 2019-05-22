@@ -13,8 +13,8 @@ class UpdateScheduleResponse {
     public function __construct(Schedule $schedule) {
         $this->scheduleName = $schedule->getScheduleName();
         $this->day = $schedule->getDay();
-        $this->startTime = $schedule->startTime();
-        $this->endTime = $schedule->endTime();
+        $this->startTime = $schedule->getStartTime();
+        $this->endTime = $schedule->getEndTime();
     }
 
     public function setScheduleName($scheduleName) {

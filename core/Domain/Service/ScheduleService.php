@@ -24,7 +24,8 @@ class ScheduleService {
 
     public function __construct(ScheduleRepositoryInterface $scheduleRepository,
     AddScheduleUseCase $addScheduleUseCase,UpdateScheduleUseCase $updateScheduleUseCase,
-    ViewAllScheduleUseCase $viewAllScheduleUseCase,FindScheduleUseCase $findScheduleUseCase) {
+    ViewAllScheduleUseCase $viewAllScheduleUseCase,FindScheduleUseCase $findScheduleUseCase) 
+    {
         $this->scheduleRepository = $scheduleRepository;
         $this->addScheduleUseCase = $addScheduleUseCase;
         $this->updateScheduleUseCase = $updateScheduleUseCase;
@@ -32,21 +33,25 @@ class ScheduleService {
         $this->viewAllScheduleUseCase = $viewAllScheduleUseCase;
     }
 
-    public function addSchedule($scheduleRequest) : AddScheduleResponse {
+    public function addSchedule($scheduleRequest) : AddScheduleResponse 
+    {
         $scheduleRequestAdded = new AddScheduleRequest($scheduleRequest);
         return $this->addScheduleUseCase->addSchedule($scheduleRequestAdded);
     }
 
-    public function findSchedule($scheduleId) : FindScheduleResponse {
+    public function findSchedule($scheduleId) : FindScheduleResponse 
+    {
         return $this->findScheduleUseCase->findSchedule($scheduleId);
     }
 
-    public function updateSchedule($scheduleId, $scheduleRequest) : UpdateScheduleResponse  {
+    public function updateSchedule($scheduleId, $scheduleRequest) : UpdateScheduleResponse
+    {
         $scheduleRequest = new UpdateScheduleRequest($scheduleRequest);
         return $this->updateScheduleUseCase->updateSchedule($scheduleId,$scheduleRequest);
     }
 
-    public function getAllSchedules() : ViewAllScheduleResponse{
+    public function getAllSchedules() : ViewAllScheduleResponse
+    {
         return $this->viewAllScheduleUseCase->getAllSchedules();
     }
 

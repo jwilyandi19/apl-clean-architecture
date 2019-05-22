@@ -9,10 +9,10 @@ class AddScheduleRequest {
     protected $endTime;
 
     public function __construct($scheduleRequest) {
-        $this->scheduleName = $scheduleRequest['scheduleName'];
-        $this->day = $scheduleRequest['scheduleDay'];
-        $this->startTime = $scheduleRequest['startTime'];
-        $this->endTime = $scheduleRequest['endTime'];
+        $this->scheduleName = $scheduleRequest['schedulename'];
+        $this->day = $scheduleRequest['scheduleday'];
+        $this->startTime = $scheduleRequest['starttime'];
+        $this->endTime = $scheduleRequest['endtime'];
     }
 
     public function setScheduleName($scheduleName) {

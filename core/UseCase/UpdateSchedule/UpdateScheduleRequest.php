@@ -10,10 +10,10 @@ class UpdateScheduleRequest {
     protected $endTime;
 
     public function __construct($scheduleData) {
-        $this->scheduleName = $scheduleData['scheduleName'];
-        $this->day = $scheduleData['day'];
-        $this->startTime = $scheduleData['startTime'];
-        $this->endTime = $scheduleData['endTime'];
+        $this->scheduleName = $scheduleData['schedulename'];
+        $this->day = $scheduleData['scheduleday'];
+        $this->startTime = $scheduleData['starttime'];
+        $this->endTime = $scheduleData['endtime'];
     }
 
     public function setScheduleName($scheduleName) {

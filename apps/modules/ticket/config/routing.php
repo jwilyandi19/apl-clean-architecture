@@ -17,7 +17,7 @@ $router->addGet('/schedule/{scheduleId}', [
 ]);
 
 $router->addPost('/schedule', [
-    'namespace' => 'App\Ticket\Controllers\Api',
+    'namespace' => 'App\Ticket\Controllers\Web',
     'module' => 'ticket',
     'controller' => 'schedule',
     'action' => 'addSchedule'
@@ -28,4 +28,18 @@ $router->addGet('/schedule',[
     'module' => 'ticket',
     'controller' => 'schedule',
     'action' => 'formAddSchedule'
+]);
+
+$router->addPost('/schedule/{scheduleId}/update', [
+    'namespace' => 'App\Ticket\Controllers\Web',
+    'module' => 'ticket',
+    'controller' => 'schedule',
+    'action' => 'updateSchedule'
+]);
+
+$router->addGet('/schedule/{scheduleId}/update',[
+    'namespace' => 'App\Ticket\Controllers\Web',
+    'module' => 'ticket',
+    'controller' => 'schedule',
+    'action' => 'formUpdateSchedule'
 ]);
