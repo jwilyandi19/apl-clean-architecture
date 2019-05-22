@@ -1,0 +1,28 @@
+CleanArch\TicketOnline\Domain\Entity\Ticket:
+  type: entity
+  table: attendant
+  id:
+    id:
+      type: bigint
+      generator:
+        strategy: IDENTITY
+  fields:
+    description:
+      type: string
+      length: 100
+      column: descriptiom
+    ticketNumber:
+      type: string
+      length: 20
+      column: ticketnumber
+    expiryDate :
+      type: datetime
+      column: expirydate
+  
+  manyToOne:
+    schedule:
+      targetEntity: CleanArch\TicketOnline\Domain\Entity\Schedule
+  
+  manyToOne:
+    attendant:
+      targetEntity: CleanArch\TicketOnline\Domain\Entity\Attendant

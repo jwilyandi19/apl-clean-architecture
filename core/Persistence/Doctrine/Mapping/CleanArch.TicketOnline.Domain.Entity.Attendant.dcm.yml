@@ -1,0 +1,17 @@
+CleanArch\TicketOnline\Domain\Entity\Attendant:
+  type: entity
+  table: attendant
+  id:
+    id:
+      type: bigint
+      generator:
+        strategy: IDENTITY
+  fields:
+    name:
+      type: string
+      length: 30
+      column: name
+    email:
+      type: string
+      length: 30
+      column: email

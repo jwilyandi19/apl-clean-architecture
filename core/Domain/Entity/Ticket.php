@@ -7,7 +7,7 @@ class Ticket extends AbstractEntity {
     protected $attendant;
     protected $description;
     protected $ticketNumber;
-    protected $total;
+    protected $expiryDate;
 
     public function setSchedule(Schedule $schedule) {
         $this->schedule = $schedule;
@@ -45,12 +45,12 @@ class Ticket extends AbstractEntity {
         return $this;
     }
 
-    public function getTotal() {
-        return $this->total;
+    public function getExpiryData() {
+        return $this->expiryDate;
     }
 
-    public function setTotal($total) {
-        $this->total = $total;
+    public function setExpireDate($expiryDate) {
+        $this->expiryDate = $expiryDate;
         return $this;
     }
 }

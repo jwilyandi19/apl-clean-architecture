@@ -13,6 +13,8 @@ use CleanArch\TicketOnline\UseCase\AddSchedule\AddScheduleUseCase;
 use CleanArch\TicketOnline\UseCase\UpdateSchedule\UpdateScheduleUseCase;
 use CleanArch\TicketOnline\UseCase\ViewAllSchedule\ViewAllScheduleUseCase;
 use CleanArch\TicketOnline\UseCase\FindSchedule\FindScheduleUseCase;
+use CleanArch\TicketOnline\UseCase\AddAttendant\AddAttendantUseCase;
+use CleanArch\TicketOnline\UseCase\FindAttendant\FindAttendantUseCase;
 
 class Module implements ModuleDefinitionInterface
 {
@@ -66,6 +68,11 @@ class Module implements ModuleDefinitionInterface
             return new \CleanArch\TicketOnline\Persistence\Doctrine\Repository\ScheduleRepository($entityManager);
         });
 
+        $di->setShared('attendantRepository', function() {
+            $entityManager = $this->get('entityManager');
+            return new \CleanArch\TicketOnline\Persistence\Doctrine\Repository\AttendantRepository($entityManager);
+        });
+
         $di->set('addScheduleUseCase', function() {
             $scheduleRepository = $this->get('scheduleRepository');
             return new AddScheduleUseCase($scheduleRepository);
@@ -86,6 +93,17 @@ class Module implements ModuleDefinitionInterface
             return new FindScheduleUseCase($scheduleRepository);
         });
 
+        $di->set('addAttendantUseCase', function() {
+            $attendantRepository = $this->get('attendantRepository');
+            return new AddAttendantUseCase($attendantRepository);
+        });
+
+        $di->set('findAttendantUseCase', function() {
+            $attendantRepository = $this->get('attendantRepository');
+            return new FindAttendantUseCase($attendantRepository);
+        });
+
+
         $di->set('scheduleService', function() {
             $scheduleRepository = $this->get('scheduleRepository');
             $addScheduleUC = $this->get('addScheduleUseCase');
@@ -94,6 +112,14 @@ class Module implements ModuleDefinitionInterface
             $findScheduleUC = $this->get('findScheduleUseCase');
 
             return new \CleanArch\TicketOnline\Domain\Service\ScheduleService($scheduleRepository, $addScheduleUC,$updateScheduleUC,$viewAllScheduleUC,$findScheduleUC);
+        });
+
+        $di->set('attendantService', function() {
+            $attendantRepository = $this->get('attendantRepository');
+            $addAttendantUC = $this->get('addAttendantUseCase');
+            $findAttendantUC = $this->get('findAttendantUseCase');
+
+            return new \CleanArch\TicketOnline\Domain\Service\AttendantService($attendantRepository,$addAttendantUC,$findAttendantUC);
         });
 
         $di->setShared('jmsSerializer', function() {
