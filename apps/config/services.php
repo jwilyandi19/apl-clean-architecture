@@ -6,12 +6,29 @@ use Phalcon\Http\Response\Cookies;
 use Phalcon\Security;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Mvc\View;
+use Phalcon\Http\Request;
+use Phalcon\Http\Response;
+use Phalcon\Db\Adapter\Pdo\Mysql;
 use Phalcon\Flash\Direct as FlashDirect;
 use Phalcon\Flash\Session as FlashSession;
+
+
 
 $di['config'] = function() use ($config) {
 	return $config;
 };
+
+$di->setShared('db', function() {    
+    return new Mysql(
+        [
+            "host"     => 'localhost',
+            "username" => 'root',
+            "password" => '',
+            "dbname"   => 'ticketonline',
+            "port"     => '3306',
+        ]
+    );
+});
 
 $di['session'] = function() {
     $session = new Session();
@@ -32,7 +49,7 @@ $di['dispatcher'] = function() use ($di, $defaultModule) {
 $di['url'] = function() use ($config, $di) {
 	$url = new \Phalcon\Mvc\Url();
 
-    $url->setBaseUri($config->url['baseUrl']);
+    //$url->setBaseUri($config->url['baseUrl']);
 
 	return $url;
 };
@@ -97,3 +114,6 @@ $di->set(
         return $flash;
     }
 );
+
+$di->set('response', new Response());
+$di->set('request', new Request());

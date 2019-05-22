@@ -1,0 +1,23 @@
+CleanArch\TicketOnline\Domain\Entity\Schedule:
+  type: entity
+  table: schedule
+  id:
+    id:
+      type: bigint
+      generator:
+        strategy: IDENTITY
+  fields:
+    scheduleName:
+      type: string
+      length: 30
+      column: name
+    day:
+      type: string
+      length: 30
+      column: day
+    startTime:
+      type: integer
+      column: starttime
+    endTime:
+      type: integer
+      column: endtime

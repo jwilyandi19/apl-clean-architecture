@@ -2,6 +2,7 @@
 namespace CleanArch\TicketOnline\Persistence\Doctrine\Repository;
 
 use Doctrine\ORM\EntityManager;
+use http\Exception\RuntimeException;
 use CleanArch\TicketOnline\Domain\Entity\AbstractEntity;
 use CleanArch\TicketOnline\Domain\Repository\RepositoryInterface;
 abstract class AbstractDoctrineRepository implements RepositoryInterface
@@ -24,16 +25,16 @@ abstract class AbstractDoctrineRepository implements RepositoryInterface
     }
 
     public function getAll() {
-        return $this->entityManager->getRepository($this->entityClass)
-            ->findAll();
+        return $this->entityManager->getRepository($this->entityClass)->findAll();
     }
 
     public function getBy($conditions = [], $order = [], $limit = null, $offset = null) {
         $repository = $this->entityManager->getRepository($this->entityClass);
         $results = $repository->findBy($conditions, $order, $limit, $offset);
+        return $results;
     }
 
-    public function persist(AbstractEntity $entity) {
+    public function persist($entity) {
         $this->entityManager->persist($entity);
         return $this;
     }

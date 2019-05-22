@@ -1,0 +1,4 @@
+<div>Schedule: <?= $schedule->getScheduleName() ?></div>
+<div>Day: <?= $schedule->getDay() ?></div>
+<div>Start Time: <?= $schedule->getStartTime() ?></div>
+<div>End Time: <?= $schedule->getEndTime() ?></div>

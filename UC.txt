@@ -1,0 +1,28 @@
+> AddSchedule
+> ViewAllSchedule
+> FindSchedule
+> CreateTicket
+> FindTicket
+> FindTicketByUser
+> UpdateTicket
+> AddAttendant
+> UpdateAttendant
+> IsExpiredTicket
+> DeleteTicket
+
+
+User input data diri
+User input data tiketnya (bisa milih schedule)
+Tiket tergenerate
+Tiket diset 1 hari expire
+User membayar tiket secara manual
+Jika tiket sudah dibayar, expire tiket dihapus
+
+API
+- Dapatkan data tiket
+- Dapatkan data schedule
+
+
+
+Attendant -> Ticket (One to many)
+Ticket -> Schedule (many to one)

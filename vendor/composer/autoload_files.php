@@ -7,7 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '10a6847eba8a430a134fad89f4a30a26' => $vendorDir . '/zendframework/zend-cache/autoload/patternPluginManagerPolyfill.php',
+    'e88992873b7765f9b5710cab95ba5dd7' => $vendorDir . '/hoa/consistency/Prelude.php',
+    '3e76f7f02b41af8cea96018933f6b7e3' => $vendorDir . '/hoa/protocol/Wrapper.php',
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '34901568a1e26d13dd475cb2c85e0284' => $vendorDir . '/zendframework/zend-form/autoload/formElementManagerPolyfill.php',
     '44e5ab5e8a88f2622349e7fac64640d2' => $vendorDir . '/doctrine/doctrine-orm-module/src/autoload.php',
 );

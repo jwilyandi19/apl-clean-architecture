@@ -9,9 +9,9 @@ return new Config(
         'database' => [
             'adapter' => 'Phalcon\Db\Adapter\Pdo\Sqlsrv',
             'host' => 'localhost',
-            'username' => 'user',
-            'password' => 'pass',
-            'dbname' => 'dbname'
+            'username' => 'root',
+            'password' => '',
+            'dbname' => 'ticketonline'
         ],   
         
         'url' => [

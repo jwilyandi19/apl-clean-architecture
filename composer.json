@@ -1,14 +1,32 @@
 {
+    "name": "TicketOnline",
+    "description": "Arsitektur bersih",
+    "type": "project",
+    "authors": [
+        {
+            "name": "JW",
+            "email": "jwilyandi@gmail.com"
+        }
+    ],
     "require": {
         "doctrine/orm": "^2.6",
-        "doctrine/doctrine-orm-module": "^2.1"
+        "symfony/yaml": "^4.2",
+        "doctrine/doctrine-orm-module": "^2.1",
+        "jms/serializer": "^3.0"
     },
     "autoload": {
         "psr-4": {
-            "CleanArch\\TicketOnline\\": ["core/"],
+            "CleanArch\\TicketOnline\\": "core/",
             "CleanArch\\TicketOnline\\Domain\\Repository\\": "core/Domain/Repository/",
             "CleanArch\\TicketOnline\\Domain\\Entity\\": "core/Domain/Entity/",
-            "CleanArch\\TicketOnline\\Domain\\Factory\\": "core/Domain/Factory/"
+            "CleanArch\\TicketOnline\\Domain\\Factory\\": "core/Domain/Factory/",
+            "CleanArch\\TicketOnline\\Persistence\\": "core/Persistence/",
+            "CleanArch\\TicketOnline\\Persistence\\Doctrine\\": "core/Persistence/Doctrine/",
+            "CleanArch\\TicketOnline\\Persistence\\Repository\\": "core/Persistence/Repository/",
+            "CleanArch\\TicketOnline\\UseCase\\": "core/UseCase/",
+            "FactoryMethod\\":"FactoryMethod/"
+    
+
         }
     }
 }
