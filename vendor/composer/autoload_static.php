@@ -101,6 +101,7 @@ class ComposerStaticInitd39c62bb575d18eae0848e973f7e699c
         'C' => 
         array (
             'CleanArch\\TicketOnline\\UseCase\\' => 31,
+            'CleanArch\\TicketOnline\\Presenter\\' => 33,
             'CleanArch\\TicketOnline\\Persistence\\Repository\\' => 46,
             'CleanArch\\TicketOnline\\Persistence\\Doctrine\\' => 44,
             'CleanArch\\TicketOnline\\Persistence\\' => 35,
@@ -334,6 +335,10 @@ class ComposerStaticInitd39c62bb575d18eae0848e973f7e699c
         'CleanArch\\TicketOnline\\UseCase\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core/UseCase',
+        ),
+        'CleanArch\\TicketOnline\\Presenter\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/core/Presenter',
         ),
         'CleanArch\\TicketOnline\\Persistence\\Repository\\' => 
         array (

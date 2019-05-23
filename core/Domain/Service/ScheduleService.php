@@ -55,6 +55,16 @@ class ScheduleService {
         return $this->viewAllScheduleUseCase->getAllSchedules();
     }
 
+    public function map($entity) : array
+    {
+        $arr['schedulename'] = $entity->get('schedulename');
+        $arr['scheduleday'] = $entity->get('scheduleday');
+        $arr['starttime'] = $entity->get('starttime');
+        $arr['endtime'] = $entity->get('endtime');
+
+        return $arr;
+    }
+
 
 
 

@@ -2,7 +2,7 @@
 use Phalcon\Mvc\Router;
 // Create the router
 $router = new Router();
-$router->add('/', [
+$router->add('/schedule', [
     'namespace' => 'App\Ticket\Controllers\Web',
     'module' => 'ticket',
     'controller' => 'schedule',
@@ -10,36 +10,52 @@ $router->add('/', [
 ]);
 
 $router->addGet('/schedule/{scheduleId}', [
-    'namespace' => 'App\Ticket\Controllers\Web',
+    'namespace' => 'App\Ticket\Controllers\Api',
     'module' => 'ticket',
     'controller' => 'schedule',
     'action' => 'findSchedule'
 ]);
 
 $router->addPost('/schedule', [
-    'namespace' => 'App\Ticket\Controllers\Web',
+    'namespace' => 'App\Ticket\Controllers\Api',
     'module' => 'ticket',
     'controller' => 'schedule',
     'action' => 'addSchedule'
 ]);
 
-$router->addGet('/schedule',[
-    'namespace' => 'App\Ticket\Controllers\Web',
-    'module' => 'ticket',
-    'controller' => 'schedule',
-    'action' => 'formAddSchedule'
-]);
 
 $router->addPost('/schedule/{scheduleId}/update', [
-    'namespace' => 'App\Ticket\Controllers\Web',
+    'namespace' => 'App\Ticket\Controllers\Api',
     'module' => 'ticket',
     'controller' => 'schedule',
     'action' => 'updateSchedule'
 ]);
 
-$router->addGet('/schedule/{scheduleId}/update',[
+$router->addGet('/', [
     'namespace' => 'App\Ticket\Controllers\Web',
     'module' => 'ticket',
-    'controller' => 'schedule',
-    'action' => 'formUpdateSchedule'
+    'controller' => 'attendant',
+    'action' => 'showAddAttendantForm'
 ]);
+
+$router->addPost('/', [
+    'namespace' => 'App\Ticket\Controllers\Web',
+    'module' => 'ticket',
+    'controller' => 'attendant',
+    'action' => 'addAttendant'
+]);
+
+$router->addPost('/attendant', [
+    'namespace' => 'App\Ticket\Controllers\Api',
+    'module' => 'ticket',
+    'controller' => 'attendant',
+    'action' => 'addAttendant'
+]);
+
+$router->addGet('/attendant/{attendantId}', [
+    'namespace' => 'App\Ticket\Controllers\Api',
+    'module' => 'ticket',
+    'controller' => 'attendant',
+    'action' => 'findAttendant'
+]);
+

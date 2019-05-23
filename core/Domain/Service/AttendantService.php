@@ -32,4 +32,13 @@ class AttendantService {
     {
         return $this->findAttendantUseCase->findAttendant($attendantId);
     }
+
+    public function map($entity) : array
+    {
+        $arr['name'] = $entity->get('name');
+        $arr['email'] = $entity->get('email');
+
+        return $arr;
+    }
+
 }

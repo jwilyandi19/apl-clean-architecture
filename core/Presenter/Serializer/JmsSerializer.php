@@ -1,7 +1,7 @@
 <?php
 namespace CleanArch\TicketOnline\Presenter\Serializer;
 
-class JmsSerializer 
+class JmsSerializer implements SerializerInterface
 {
     protected $serializer;
 

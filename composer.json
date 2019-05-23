@@ -24,6 +24,7 @@
             "CleanArch\\TicketOnline\\Persistence\\Doctrine\\": "core/Persistence/Doctrine/",
             "CleanArch\\TicketOnline\\Persistence\\Repository\\": "core/Persistence/Repository/",
             "CleanArch\\TicketOnline\\UseCase\\": "core/UseCase/",
+            "CleanArch\\TicketOnline\\Presenter\\": "core/Presenter/",
             "FactoryMethod\\":"FactoryMethod/"
     
 

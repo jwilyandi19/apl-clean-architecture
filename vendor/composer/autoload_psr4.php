@@ -61,6 +61,7 @@ return array(
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common', $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common', $vendorDir . '/doctrine/persistence/lib/Doctrine/Common', $vendorDir . '/doctrine/reflection/lib/Doctrine/Common'),
     'CleanArch\\TicketOnline\\UseCase\\' => array($baseDir . '/core/UseCase'),
+    'CleanArch\\TicketOnline\\Presenter\\' => array($baseDir . '/core/Presenter'),
     'CleanArch\\TicketOnline\\Persistence\\Repository\\' => array($baseDir . '/core/Persistence/Repository'),
     'CleanArch\\TicketOnline\\Persistence\\Doctrine\\' => array($baseDir . '/core/Persistence/Doctrine'),
     'CleanArch\\TicketOnline\\Persistence\\' => array($baseDir . '/core/Persistence'),
